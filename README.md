@@ -139,6 +139,10 @@ Diseñar y documentar un asistente virtual de IA que automatice la negociación 
 | Solicita abogado | Derivar para hablar con profesional. |
 | **Cualquier otro** | **Cerrar:** "Procederemos legalmente." |
 
+
+<img width="990" height="1010" alt="Mi primer tablero" src="https://github.com/user-attachments/assets/36042e71-cc1f-416d-8ad7-a5a42b594e9d" />
+
+
 ---
 
 *Perfil definido el 13 de agosto de 2026*
