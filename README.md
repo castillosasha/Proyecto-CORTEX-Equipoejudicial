@@ -140,7 +140,8 @@ Diseñar y documentar un asistente virtual de IA que automatice la negociación 
 | **Cualquier otro** | **Cerrar:** "Procederemos legalmente." |
 
 
-<img width="990" height="1010" alt="Mi primer tablero" src="https://github.com/user-attachments/assets/36042e71-cc1f-416d-8ad7-a5a42b594e9d" />
+<img width="963" height="1037" alt="Mi primer tablero (1)" src="https://github.com/user-attachments/assets/53186c9d-77ff-4518-a0ba-8e994610ae1b" />
+
 
 
 ---
