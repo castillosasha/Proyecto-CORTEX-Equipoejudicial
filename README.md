@@ -146,4 +146,31 @@ Diseñar y documentar un asistente virtual de IA que automatice la negociación 
 
 ---
 
-*Perfil definido el 13 de agosto de 2026*
+---
+
+## 📊 Semana 3: Radar Cognitivo
+
+### Puntuaciones del Radar
+
+| **Dimensión** | **Puntuación (1-10)** | **Justificación** |
+| :--- | :--- | :--- |
+| **Atención** | 🟢 **9/10** | Debe filtrar el 80% del mensaje (saludos, excusas, lamentos) y extraer solo el 20% clave: ¿Sí o no a la oferta? |
+| **Memoria** | 🟢 **8/10** | Debe recordar: nombre del deudor, monto de deuda, días de atraso, oferta vigente, historial de excusas. |
+| **Lenguaje** | 🟢 **9/10** | Debe comprender excusas complejas y generar respuestas legales firmes sin caer en ambigüedades. |
+| **Emoción** | 🔴 **2/10** | El agente NO debe validar emociones. Su tono es neutral, sin empatía. Solo detecta vulnerabilidad extrema. |
+
+---
+
+### Justificación General
+
+> *"Nuestro bot necesita mucha **Atención (9/10)** y **Lenguaje (9/10)** para filtrar excusas y responder con firmeza legal, **Memoria (8/10)** para recordar datos clave del deudor y la oferta vigente, pero **baja Emoción (2/10)** porque no debe validar sentimientos ni generar empatía. Su función es ejecutar la ley, no consolar."*
+
+---
+### Gráfico de Radar
+
+
+---****
+
+*Última actualización: 14 de agosto de 2026*
+
+
