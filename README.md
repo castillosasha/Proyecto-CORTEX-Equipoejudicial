@@ -172,6 +172,8 @@ Diseñar y documentar un asistente virtual de IA que automatice la negociación 
 
 ### Gráfico de Radar
 
+<img width="1920" height="1080" alt="Radar" src="https://github.com/user-attachments/assets/29cc2cd5-e918-4033-8cd2-814032687444" />
+
 ---
 
 ### Conclusión General
