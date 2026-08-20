@@ -148,28 +148,38 @@ Diseñar y documentar un asistente virtual de IA que automatice la negociación 
 
 ---
 
-## 📊 Semana 3: Radar Cognitivo
+## 📊 Radar Cognitivo - Justificación Detallada
 
-### Puntuaciones del Radar
+### 1. Cognición General: 8/10
+> *"El agente opera bajo principios de cognición humana para simular razonamiento jurídico. Debe procesar información como un ser humano pero con la precisión de una máquina."*
 
-| **Dimensión** | **Puntuación (1-10)** | **Justificación** |
-| :--- | :--- | :--- |
-| **Atención** | 🟢 **9/10** | Debe filtrar el 80% del mensaje (saludos, excusas, lamentos) y extraer solo el 20% clave: ¿Sí o no a la oferta? |
-| **Memoria** | 🟢 **8/10** | Debe recordar: nombre del deudor, monto de deuda, días de atraso, oferta vigente, historial de excusas. |
-| **Lenguaje** | 🟢 **9/10** | Debe comprender excusas complejas y generar respuestas legales firmes sin caer en ambigüedades. |
-| **Emoción** | 🔴 **2/10** | El agente NO debe validar emociones. Su tono es neutral, sin empatía. Solo detecta vulnerabilidad extrema. |
+### 2. Percepción y Atención: 9/10
+> *"El agente necesita atención muy alta porque debe filtrar todo el ruido que el deudor introduce (saludos, excusas, historias personales, lamentos) y extraer ÚNICAMENTE la información relevante: ¿Acepta o no acepta la oferta? El 80% del mensaje del deudor es irrelevante para la negociación. Utiliza atención selectiva y dividida."*
+
+### 3. Aprendizaje y Memoria: 8/10
+> *"El agente necesita memoria alta porque debe recordar múltiples datos durante la conversación: el nombre del deudor, el monto exacto de la deuda, los días de atraso, la oferta vigente, las excusas ya escuchadas, y las consecuencias legales que ya fueron informadas. La memoria de trabajo es clave para mantener el contexto de la llamada. Sin embargo, no necesita memoria infinita porque la conversación es corta (menos de 5 minutos) y la oferta es única."*
+
+### 4. Procesamiento Lingüístico: 9/10
+> *"El agente necesita lenguaje muy alto porque debe comprender excusas complejas y variadas, interpretar el sarcasmo sin caer en él, y generar respuestas legales firmes, claras y sin ambigüedades. Cada palabra debe tener peso legal y no dejar espacio a interpretaciones. La pragmática es clave para entender la intención real del deudor más allá de sus palabras."*
+
+### 5. Pensamiento y Razonamiento: 8/10
+> *"El agente necesita razonamiento alto para evaluar excusas, decidir si derivar o cerrar, y aplicar razonamiento deductivo (si X, entonces Y). Debe resolver el problema de la deuda siguiendo un árbol de decisión lógico. También debe aplicar razonamiento jurídico para informar consecuencias legales de manera precisa."*
+
+### 6. Motivación, Cognición y Emoción: 2/10
+> *"El agente necesita emoción muy baja porque su función NO es validar, consolar o generar empatía. Su tono debe ser neutral y firme. La emoción es un distractor que debilita la posición del agente. Solo necesita un 2/10 para detectar vulnerabilidad extrema (casos de derivación a asesor) como enfermedad terminal o violencia de género."*
 
 ---
 
-### Justificación General
-
-> *"Nuestro bot necesita mucha **Atención (9/10)** y **Lenguaje (9/10)** para filtrar excusas y responder con firmeza legal, **Memoria (8/10)** para recordar datos clave del deudor y la oferta vigente, pero **baja Emoción (2/10)** porque no debe validar sentimientos ni generar empatía. Su función es ejecutar la ley, no consolar."*
-
----
 ### Gráfico de Radar
 
+---
 
----****
+### Conclusión General
+
+> *"Nuestro bot necesita puntuaciones altas en **Atención (9/10)** y **Lenguaje (9/10)** para filtrar excusas y responder con firmeza legal, **Memoria (8/10)** y **Razonamiento (8/10)** para recordar datos clave y decidir, pero **Emoción baja (2/10)** porque no debe validar sentimientos ni generar empatía. Su función es ejecutar la ley, no consolar."*
+
+
+---
 
 *Última actualización: 14 de agosto de 2026*
 
