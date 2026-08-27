@@ -183,6 +183,46 @@ Diseñar y documentar un asistente virtual de IA que automatice la negociación 
 
 ---
 
-*Última actualización: 14 de agosto de 2026*
+---
+
+## 🧠 Semana 4: La Matriz de Sensores
+
+### Inventario de Inputs del Agente
+
+| **Categoría** | **Inputs** | **Ejemplos** |
+| :--- | :--- | :--- |
+| **Sensaciones (Crudos)** | Texto, hora, duración, emojis, mayúsculas, puntuación, tono de voz, silencios, frecuencia, contexto | "No tengo plata", 18:35, 😡, "NO QUIERO", "¿¡Cómo!?" |
+| **Percepciones (Interpretados)** | Palabras clave, intención, patrón de lenguaje, nivel de cooperación, emoción, decisión, urgencia, vulnerabilidad | "Sí/No", "Evade", "Repite excusas", "Colaborador" |
+
+### Reto Lógico: Pregunta vs. Afirmación
+
+**Regla de detección:**
+- **PREGUNTA** → Contiene "¿" o palabras interrogativas (qué, cuánto, cómo, por qué, cuándo, dónde)
+- **AFIRMACIÓN** → No contiene "¿" ni palabras interrogativas
+
+**Ejemplos:**
+| **Frase** | **Tipo** | **Regla Aplicada** |
+| :--- | :--- | :--- |
+| "¿Puedo pagar después?" | PREGUNTA | Contiene "¿" + "puedo" |
+| "No tengo dinero" | AFIRMACIÓN | No contiene "¿" ni interrogativas |
+| "¿Cuánto es el descuento?" | PREGUNTA | Contiene "¿" + "cuánto" |
+| "Mi hermana usó el crédito" | AFIRMACIÓN | No contiene "¿" ni interrogativas |
+
+### Tabla de Reglas de Decisión
+
+| **Condición** | **Etiqueta** | **Acción del Agente** |
+| :--- | :--- | :--- |
+| "Sí", "Acepto", "De acuerdo" | ACEPTA | Cierra acuerdo y deriva para formalizar |
+| "No", "No puedo", "No tengo" | RECHAZA | Informa consecuencias legales |
+| "¿Abogado?", "¿Asesor?" | PIDE ASESOR | Deriva a asesor humano |
+| "Enfermedad", "Violencia", "Desempleo" | VULNERABILIDAD | Deriva para plan excepcional |
+| Excusa + No acepta + No pide asesor | EVASIÓN | Corta, documenta negativa y pasa a vía legal |
+
+### Captura del Tablero Miro
+
+<img width="1210" height="826" alt="Perception Analysis" src="https://github.com/user-attachments/assets/ea429c01-20a1-441e-ad96-f00e9fe365d3" />
+
+---
+
 
 
