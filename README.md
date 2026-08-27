@@ -218,11 +218,42 @@ Diseñar y documentar un asistente virtual de IA que automatice la negociación 
 | "Enfermedad", "Violencia", "Desempleo" | VULNERABILIDAD | Deriva para plan excepcional |
 | Excusa + No acepta + No pide asesor | EVASIÓN | Corta, documenta negativa y pasa a vía legal |
 
-### Captura del Tablero Miro
+### INPUTS DEL AGENTE
 
 <img width="1210" height="826" alt="Perception Analysis" src="https://github.com/user-attachments/assets/ea429c01-20a1-441e-ad96-f00e9fe365d3" />
 
 ---
 
+---
+
+## 🧠 Semana 5: El Flujo de Procesamiento
+
+### Diagrama de Flujo Perceptivo
+
+El flujo que sigue el agente desde que recibe el mensaje hasta que toma una decisión:
+
+| **Paso** | **Proceso** | **Ejemplo** |
+| :--- | :--- | :--- |
+| **1. ENTRADA** | Recibe texto crudo + metadata | "Buenas tardes, no tengo plata, mi hermana usó el crédito" (18:35) |
+| **2. FILTRO** | Extrae solo información relevante | "no tengo" + "mi hermana" |
+| **3. ANÁLISIS** | ¿Pregunta o afirmación? ¿Qué excusa? | AFIRMACIÓN → "Deuda de familiar" |
+| **4. INTENCIÓN** | ¿Acepta? ¿Rechaza? ¿Evade? | EVASIÓN (no dice SÍ ni NO, da excusa) |
+| **5. DECISIÓN** | ¿Derivar o cerrar? ¿Qué respuesta? | CERRAR → "El contrato lo firmó usted. ¿Acepta o no?" |
+
+### Tabla de Decisiones del Agente
+
+| **Condición** | **Etiqueta** | **Acción del Agente** |
+| :--- | :--- | :--- |
+| "Sí", "Acepto", "De acuerdo" | **ACEPTA** | Cierra acuerdo y deriva para formalizar |
+| "No", "No puedo", "No tengo" | **RECHAZA** | Informa consecuencias legales (embargo, costas) |
+| "¿Abogado?", "¿Asesor?" | **PIDE ASESOR** | Deriva a asesor humano |
+| "Enfermedad", "Violencia", "Desempleo" | **VULNERABILIDAD** | Deriva para plan excepcional |
+| Excusa + No acepta + No pide asesor | **EVASIÓN** | Corta, documenta negativa, pasa a vía legal |
+
+### FLUJO DE PROCESAMIENTO
+
+<img width="784" height="1274" alt="Diagrama de flujo" src="https://github.com/user-attachments/assets/710360db-0c48-435b-bf8d-9b76259a22da" />
+
+---
 
 
