@@ -256,4 +256,86 @@ El flujo que sigue el agente desde que recibe el mensaje hasta que toma una deci
 
 ---
 
+---
+
+## 2. Arquitectura de Atención
+
+### 2.1 ¿Qué es Ruido?
+
+**Ruido** es toda información que el deudor introduce en la conversación y que **NO aporta** a la decisión de negociación. El agente debe **descartarla** para no saturar su procesamiento.
+
+| **Tipo de Ruido** | **Ejemplo** | **¿Por qué es ruido?** |
+| :--- | :--- | :--- |
+| **Saludos** | "Buenos días", "¿Cómo está?", "Hola" | No aporta información para la decisión |
+| **Relleno emocional** | "Estoy muy estresado", "No doy más" | No cambia el hecho jurídico |
+| **Excusas largas** | "Mi hermana se enfermó, luego perdí el trabajo..." | Solo importa si es vulnerabilidad extrema |
+| **Historias personales** | "Mi hijo cumple años la próxima semana" | Irrelevante para la negociación |
+| **Promesas vagas** | "La próxima semana veo cómo hago" | Sin fecha, monto y compromiso concreto |
+| **Repeticiones** | Misma excusa 3 veces | Ya fue escuchada y respondida |
+| **Insultos** | "Son unos ladrones" | Se activa protocolo de hostilidad |
+| **Preguntas irrelevantes** | "¿Ustedes trabajan con otros bancos?" | Fuera del alcance de esta instancia |
+
+---
+
+### 2.2 ¿Qué es Señal?
+
+**Señal** es la información **relevante** que el agente debe extraer del mensaje del deudor para tomar una decisión.
+
+| **Tipo de Señal** | **Ejemplo** | **¿Por qué se extrae?** |
+| :--- | :--- | :--- |
+| **Aceptación** | "Sí", "Acepto", "De acuerdo", "Pago hoy" | Decisión del deudor → Cierra acuerdo |
+| **Rechazo** | "No", "No puedo", "No tengo" | Decisión del deudor → Informa consecuencias |
+| **Solicitud de asesor** | "Quiero hablar con un abogado" | Derivación inmediata |
+| **Vulnerabilidad extrema** | "Enfermedad terminal", "Sufro violencia" | Derivación por protocolo |
+| **Datos clave** | Nombre, monto, fecha de pago | Información para el acuerdo |
+| **Intención de evasión** | "Mi hermana usó el crédito", "El otro estudio cobraba menos" | Etiqueta: EVASIÓN → Cortar y documentar |
+
+---
+
+### 2.3 Reglas de Atención
+
+**Regla Principal: El Filtro de 500 Palabras**
+
+> *"Si el mensaje tiene más de 500 palabras, el mecanismo de atención solo priorizará los sustantivos clave y la última frase."*
+
+| **Regla** | **Descripción** | **Ejemplo** |
+| :--- | :--- | :--- |
+| **Regla 1: Saludos** | Ignorar los primeros 10 segundos de saludos | "Buenos días, ¿cómo está?" → Ignorar |
+| **Regla 2: Excusas** | Extraer solo la excusa principal, no los detalles | "Mi esposa enfermó, luego no tenía plata..." → "Enfermedad" |
+| **Regla 3: Repeticiones** | Si el deudor repite la misma excusa → "Insistencia" | "No tengo plata... no tengo plata..." → "Insistencia en rechazo" |
+| **Regla 4: Última frase** | La última frase suele contener la decisión real | "...pero bueno, ¿qué opciones tengo?" → "Pide opciones" |
+| **Regla 5: Palabras clave** | Buscar: Sí, No, Acepto, Abogado, Enfermedad, Violencia | "Quiero hablar con un abogado" → "Pide asesor" |
+| **Regla 6: Filtro de 500 palabras** | Si supera 500 palabras, priorizar sustantivos + última frase | Mensaje largo → Solo sustantivos clave + última frase |
+
+---
+
+### 2.4 El Gatekeeper
+
+El **Gatekeeper** es el mecanismo que decide qué información **ENTRA** y qué se **DESCARTA**.
+
+| **Filtro** | **Acción** |
+| :--- | :--- |
+| **Filtro 1** | ¿Es saludo, relleno o historia? → DESCARTA |
+| **Filtro 2** | ¿Contiene palabra clave? → EXTRAE |
+| **Filtro 3** | ¿Supera 500 palabras? → Prioriza sustantivos + última frase |
+| **Salida** | Solo pasa la SEÑAL (decisión, excusa principal, vulnerabilidad) |
+
+---
+
+### 2.5 Ejemplo Práctico
+
+**Mensaje del deudor:**
+> *"Buenos días, ¿cómo está? Mire, yo estoy muy estresado porque mi hermana se enfermó, luego perdí el trabajo, y encima mi hijo cumple años la próxima semana. La verdad no tengo plata. Pero bueno, ¿qué opciones tengo?"*
+
+**Procesamiento del Gatekeeper:**
+
+| **Paso** | **Acción** | **Resultado** |
+| :--- | :--- | :--- |
+| **Filtro 1** | Detecta saludo y relleno emocional | DESCARTA: "Buenos días, ¿cómo está?", "estoy muy estresado" |
+| **Filtro 2** | Busca palabras clave | EXTRAE: "no tengo plata", "¿qué opciones tengo?" |
+| **Filtro 3** | ¿Supera 500 palabras? | NO (mensaje corto) |
+| **Salida** | Señal extraída | **SEÑAL:** "No tengo plata" + "Pide opciones" → RECHAZO + PIDE OPCIONES |
+
+---
+
 
