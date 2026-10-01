@@ -375,5 +375,40 @@ Nuestro agente necesita una **Memoria Semántica** (su enciclopedia interna) y u
 ---
 
 ### 3.3 Esquema Visual de la Base de Datos
-
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ │
+│ 🧠 ARQUITECTURA DE MEMORIA │
+│ │
+│ ┌─────────────────────────────────────────────────────────────────────┐ │
+│ │ │ │
+│ │ 💾 MEMORIA A LARGO PLAZO (LTM) - "Disco Duro" │ │
+│ │ │ │
+│ │ ┌─────────────────────────┐ ┌─────────────────────────────┐ │ │
+│ │ │ 📚 SEMÁNTICA (LTM) │ │ 📖 EPISÓDICA (LTM) │ │ │
+│ │ │ (Enciclopedia) │ │ (Historial) │ │ │
+│ │ │ │ │ │ │ │
+│ │ │ • Leyes y Normativas │ │ • Perfil del Deudor │ │ │
+│ │ │ • Códigos de Cobranza │ │ • Historial de Llamadas │ │ │
+│ │ │ • Consecuencias Legales │ │ • Acuerdos Previos │ │ │
+│ │ │ • Ofertas Autorizadas │ │ • Negativas Documentadas │ │ │
+│ │ │ • Libro Negro de Excusas│ │ │ │ │
+│ │ │ • Frases Prohibidas │ │ │ │ │
+│ │ └─────────────────────────┘ └─────────────────────────────┘ │ │
+│ │ │ │
+│ └─────────────────────────────────────────────────────────────────────┘ │
+│ │ │
+│ ▼ │
+│ ┌─────────────────────────────────────────────────────────────────────┐ │
+│ │ │ │
+│ │ ⚡ MEMORIA DE TRABAJO (RAM) - "Memoria Activa" │ │
+│ │ │ │
+│ │ • Últimos 5 mensajes de la conversación │ │
+│ │ • Nombre del deudor │ │
+│ │ • Oferta vigente actual │ │
+│ │ │ │
+│ │ (Se borra al terminar la llamada) │ │
+│ │ │ │
+│ └─────────────────────────────────────────────────────────────────────┘ │
+│ │
+└─────────────────────────────────────────────────────────────────────────────┘
 
