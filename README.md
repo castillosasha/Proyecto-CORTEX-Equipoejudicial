@@ -337,5 +337,43 @@ El **Gatekeeper** es el mecanismo que decide qué información **ENTRA** y qué 
 | **Salida** | Señal extraída | **SEÑAL:** "No tengo plata" + "Pide opciones" → RECHAZO + PIDE OPCIONES |
 
 ---
+---
+
+## 3. Arquitectura de Memoria
+
+### 3.1 Memoria a Largo Plazo (LTM) - El "Disco Duro"
+
+Nuestro agente necesita una **Memoria Semántica** (su enciclopedia interna) y una **Memoria Episódica** (su historial de casos). Aquí se define la estructura de lo que el agente **sabe para siempre**.
+
+---
+
+### Tabla de Estructura de Memoria (Simulación de Base de Datos)
+
+| **Tipo de Memoria** | **Categoría de Datos** | **Descripción** | **Ejemplo de Entrada** |
+| :--- | :--- | :--- | :--- |
+| **Semántica (LTM)** | Leyes y Normativas | Leyes argentinas aplicables a cobranzas | "Ley 25.326: Protección de Datos Personales" |
+| **Semántica (LTM)** | Códigos de Cobranza | Normativas de cobranza ética y horarios permitidos | "Horario permitido: 8:00 a 20:00 hs" |
+| **Semántica (LTM)** | Consecuencias Legales | Consecuencias del no pago | "Embargo de hasta el 50% del salario, costas procesales" |
+| **Semántica (LTM)** | Ofertas Autorizadas | Descuentos y planes de pago permitidos | "Descuento máx: 30%, Plan: 3 cuotas sin interés" |
+| **Semántica (LTM)** | Libro Negro de Excusas | Respuestas tipo a excusas comunes | "No tengo plata → El dinero no es el problema, es la prioridad" |
+| **Semántica (LTM)** | Frases Prohibidas | Frases que el agente NUNCA debe usar | "Entiendo su situación", "Lo siento mucho" |
+| **Episódica (LTM)** | Perfil del Deudor | Datos clave del deudor actual | "Nombre: Costa Angeles Mariana, DNI: 33184641" |
+| **Episódica (LTM)** | Historial de Llamadas | Llamadas anteriores del deudor | "13/08/2026: Se negó a pagar, pidió hablar con asesor" |
+| **Episódica (LTM)** | Acuerdos Previos | Acuerdos incumplidos o cumplidos | "Acuerdo 01/07/2026: 3 cuotas, incumplió la 2da" |
+| **Episódica (LTM)** | Negativas Documentadas | Registro de negativas para evidencia legal | "13/08/2026: Informada de consecuencias, se negó" |
+
+---
+
+### 3.2 Diferenciación: Memoria Permanente vs. Memoria de Trabajo
+
+| **Tipo** | **¿Qué guarda?** | **¿Cuándo se usa?** | **Persistencia** |
+| :--- | :--- | :--- | :--- |
+| **Memoria Semántica (LTM)** | Leyes, normativas, ofertas, frases | Siempre disponible | **Permanente** (no cambia) |
+| **Memoria Episódica (LTM)** | Perfil del deudor, historial, acuerdos | Durante cada caso | **Persistente** (se guarda en CRM) |
+| **Memoria de Trabajo (RAM)** | Últimos mensajes de la conversación actual | Durante la llamada actual | **Temporal** (se borra al terminar) |
+
+---
+
+### 3.3 Esquema Visual de la Base de Datos
 
 
