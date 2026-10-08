@@ -377,4 +377,35 @@ Nuestro agente necesita una **Memoria Semántica** (su enciclopedia interna) y u
 ### 3.3 Esquema Visual de la Base de Datos
 <img width="1312" height="1199" alt="feb9d8a3-0947-40dc-ad0c-2ce75c3c1d8d" src="https://github.com/user-attachments/assets/96e274fc-a329-44c4-b4c3-b66df1f2a6c8" />
 
+---
+
+---
+
+### 3.4 Ventana de Contexto (Memoria de Trabajo - RAM)
+
+**Regla de Ingeniería:** *"Nuestra ventana de contexto solo alojará los últimos 5 intercambios de mensajes + el nombre del usuario. Todo lo anterior a eso, se cae de la ventana (se olvida)."*
+
+| **Elemento** | **Cantidad** | **¿Se borra?** |
+| :--- | :--- | :--- |
+| **Mensajes recientes** | Últimos 5 intercambios | ✅ Sí (al superar 5) |
+| **Nombre del deudor** | 1 | ❌ No (dato fijo) |
+| **Monto de la deuda** | 1 | ❌ No (dato fijo) |
+| **Oferta vigente** | 1 | ❌ No (dato fijo) |
+| **Total en RAM** | **8 elementos** | (7±2 - Ley de Miller) |
+
+### Diagrama de la Ventana de Contexto
+
+<img width="1022" height="966" alt="image" src="https://github.com/user-attachments/assets/98d04fa2-9f73-4b32-abc1-0e4b1192b59c" />
+
+### Regla de Olvido (Cache)
+
+| **Condición** | **Acción** |
+| :--- | :--- |
+| Se superan los 5 mensajes | El mensaje más antiguo se elimina de la RAM |
+| Pasan 10 minutos de inactividad | Se limpia toda la RAM (excepto datos fijos) |
+| Termina la llamada | Se borra toda la RAM (excepto lo que se guarda en LTM/CRM) |
+
+---
+
+
 
