@@ -393,6 +393,25 @@ Nuestro agente necesita una **Memoria Semántica** (su enciclopedia interna) y u
 | **Oferta vigente** | 1 | ❌ No (dato fijo) |
 | **Total en RAM** | **8 elementos** | (7±2 - Ley de Miller) |
 
+### Justificación: La Ley de Miller (7±2)
+
+Nuestra Ventana de Contexto está diseñada siguiendo la **Ley de Miller** (1956), que establece que los humanos pueden retener entre **5 y 9 elementos (7±2)** en su memoria de trabajo al mismo tiempo.
+
+**Aplicación en nuestro agente:**
+
+| **Elemento** | **Cantidad** |
+| :--- | :--- |
+| Mensajes recientes | 5 |
+| Datos fijos (nombre, monto, oferta) | 3 |
+| **Total en RAM** | **8 elementos** |
+
+**¿Por qué 8?** Porque está dentro del rango humano (5-9) y es suficiente para que el agente:
+1. Entienda el contexto inmediato de la conversación
+2. Personalice la respuesta con el nombre del deudor
+3. Recuerde el monto y la oferta vigente
+
+**¿Por qué no más?** Porque la memoria es costosa (en tokens y procesamiento) y el agente no necesita recordar toda la conversación para cumplir su función.
+
 ### Diagrama de la Ventana de Contexto
 
 <img width="1022" height="966" alt="image" src="https://github.com/user-attachments/assets/98d04fa2-9f73-4b32-abc1-0e4b1192b59c" />
