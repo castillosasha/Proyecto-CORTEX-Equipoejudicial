@@ -426,5 +426,41 @@ Nuestra Ventana de Contexto está diseñada siguiendo la **Ley de Miller** (1956
 
 ---
 
+---
+
+### 3.5 El Bibliotecario: Procesos de Recuperación y Olvido
+
+#### Flujo de Recuperación
+
+Cuando el deudor hace una pregunta, el agente sigue este flujo:
+
+| **Paso** | **Acción** | **Descripción** |
+| :--- | :--- | :--- |
+| **1** | Input Usuario | El deudor pregunta algo: "¿Qué dice la ley sobre X?" |
+| **2** | Activar Buscador | El agente activa su mecanismo de búsqueda |
+| **3** | Consultar Tabla LTM | Busca en la categoría correspondiente (Leyes, Ofertas, Excusas) |
+| **4** | Extraer Dato | Extrae la información relevante de la LTM |
+| **5** | Llevar a RAM | Coloca el dato en la Memoria de Trabajo |
+| **6** | Generar Respuesta | Responde usando el dato extraído |
+
+#### Regla de Limpieza de Cache (Regla de Olvido)
+
+**¿Cuándo olvida el bot la conversación actual?**
+
+| **Condición** | **Acción** |
+| :--- | :--- |
+| **Si pasan 10 minutos de inactividad** | Limpiar contexto (excepto datos fijos) |
+| **Si se superan 5 mensajes** | Eliminar el mensaje más antiguo de la RAM |
+| **Si termina la llamada** | Borrar toda la RAM (excepto lo que se guarda en LTM/CRM) |
+
+**Justificación:** Esta regla sigue la **Ley de Miller (7±2)** y optimiza el uso de tokens. La memoria es costosa, por lo que el agente solo retiene lo estrictamente necesario para la conversación actual.
+
+#### Diagrama de Flujo de Recuperación
+
+<img width="671" height="395" alt="image" src="https://github.com/user-attachments/assets/8f06a1f5-0a96-4b3f-be4e-e462bf0a3593" />
+
+
+---
+
 
 
