@@ -488,7 +488,7 @@ Nuestro agente **no es un amigo ni un terapeuta**. Su rol es el de un "Oficial d
 ---
 ---
 
-## 5. Pragmática y Manejo de Ambigüedad (Semana 11)
+## 5. Pragmática y Manejo de Ambigüedad 
 
 ### El Reto: Leyendo entre líneas
 La IA tiene dificultades con el contexto. Si un deudor usa sarcasmo o frases ambiguas para expresar frustración, el agente debe reconocer la intención real sin perder su rol.
@@ -565,5 +565,32 @@ A continuación, se presentan dos simulaciones de diálogo (Chat Logs) que demue
 
 ---
 
+---
+
+---
+
+## 7. Razonamiento y Lógica
+
+### 7.1 Arquitectura del Árbol de Decisión (Lógica Condicional)
+Para que el agente sea verdaderamente inteligente, su árbol de decisión no es lineal; incluye **bucles de validación y análisis deductivo**. 
+
+El algoritmo sigue la estructura: `IF (Condición A) AND (Condición B) THEN (Acción C)`.
+
+| **Capa Lógica** | **Validación (IF)** | **Acción Deductiva (THEN)** | **Resultado** |
+| :--- | :--- | :--- | :--- |
+| **1. Identidad** | El nombre y DNI coinciden en el sistema. | Si no coincide (NO), solicita datos (bucle). Si coincide (SÍ), avanza. | Validación exitosa. |
+| **2. Negociación** | Acepta la oferta **Y** no es un caso de vulnerabilidad. | Cierra el acuerdo de pago. | **Cierre de Ciclo (Éxito).** |
+| **3. Pragmática** | El deudor evade, pide asesor o es hostil. | Deriva a humano, documenta negativa o corta la llamada. | **Cierre de Ciclo (Legal).** |
+
+### 7.2 La Regla de Oro: "No hay ramas flotantes"
+Como startup, no podemos permitir que el bot "alucine" o se quede en silencio. El algoritmo está programado para que cada ruta tenga una salida forzosa. Si el bot llega a un nodo sin salida, se activa automáticamente el protocolo de "Derivación a Humano".
+
+### Diagrama del Árbol de Decisión
+
+<img width="420" height="858" alt="image" src="https://github.com/user-attachments/assets/0a4928f7-5b62-4531-8d2b-31a96305238e" />
+
+
+
+---
 
 
