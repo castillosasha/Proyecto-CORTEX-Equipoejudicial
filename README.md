@@ -564,6 +564,6 @@ A continuación, se presentan dos simulaciones de diálogo (Chat Logs) que demue
 *Análisis del caso:* El agente aplicó la **Regla de Pragmática** (ignoró el sarcasmo y no agradeció el falso cumplido), mantuvo la **firmeza** y **recuperó** el control de la conversación redirigiéndola al hecho jurídico.
 
 ---
-*Semana 12 completada: 22 de octubre de 2026*
+
 
 
