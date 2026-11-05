@@ -618,5 +618,32 @@ Para evitar que la IA "crea" ciegamente en la excusa del deudor, programamos un 
 El agente **NO** puede asumir el rol de juez. Si el Motor de Duda Crítica detecta que el deudor miente (discrepancia de datos), no lo acusa de estafa, simplemente le niega los beneficios de descuento y lo documenta como "Deudor de Alto Riesgo" para la vía judicial.
 
 ---
-*Semana 14 completada: 5 de noviembre de 2026*
+---
+
+## 8. Prueba de Turing Lógica y Blindaje Legal (Semana 15 - Iteración V4)
+
+### 8.1 El Dry Run y la Auditoría Legal
+Al someter el diagrama V3 a una prueba de estrés lógico y legal, detectamos "bugs" críticos. Un sistema de cobranza no puede violar las leyes de trato digno al consumidor (Ley 24.240 en Argentina), ni puede exagerar los montos judiciales. 
+
+Por lo tanto, rediseñamos el árbol al **Modelo V4 (Blindado)**.
+
+### 8.2 Correcciones del Algoritmo (V4 vs V3)
+
+| **Falla Detectada (V3)** | **Solución Lógica Aplicada (V4)** |
+| :--- | :--- |
+| **Cálculo exagerado de costas** | El agente calcula matemáticamente la Tasa de Justicia (3%), Honorarios (15%) y Costas (10%). Informa que la deuda "se duplicará", sin exagerar. |
+| **Lenguaje intimidatorio** | Se eliminó el término interno "Asfixia". El bot utiliza "Notificación de Costas Procesales", un lenguaje informativo y legal. |
+| **Falta de empatía con vulnerables** | Si el deudor comprueba una vulnerabilidad real (desempleo verificado), el bot **no lo presiona**, lo deriva a un abogado humano para un plan excepcional. |
+| **Redundancia lógica** | Nivel 1: Solo evalúa Hostilidad/Insultos. Nivel 2: Solo evalúa Mentiras/Veracidad. (Evita que el bot se confunda). |
+
+### 8.3 Conclusión: Un Motor de Cobranza Ético y Letal
+El agente V4 demuestra que se puede ser **altamente efectivo sin ser abusivo**. Filtra a los agresivos, desenmascara a los mentirosos, notifica con precisión matemática las consecuencias judiciales a los evasores, y protege a los vulnerables. 
+
+### Diagrama Final del Motor Lógico (V4 Blindado)
+
+<img width="492" height="2031" alt="Asfixia Financiera" src="https://github.com/user-attachments/assets/9a4f6e6f-743b-4120-a09b-7aa507a771c9" />
+
+
+---
+
 
