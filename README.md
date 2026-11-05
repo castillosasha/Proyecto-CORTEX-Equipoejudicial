@@ -589,8 +589,34 @@ Como startup, no podemos permitir que el bot "alucine" o se quede en silencio. E
 
 <img width="420" height="858" alt="image" src="https://github.com/user-attachments/assets/0a4928f7-5b62-4531-8d2b-31a96305238e" />
 
-
-
+---
 ---
 
+## 5. Lógica y Ética 
+
+### 5.1 Identificación del "Bug Humano" (Sesgo Cognitivo)
+Entrenar una IA con datos de call centers humanos es peligroso porque hereda sus sesgos. Para nuestro agente de cobranzas, el riesgo no es solo el **Sesgo de Confirmación** (Kahneman), sino la **Falacia del Costo Hundido** (Sunk Cost Fallacy) y el **Sesgo de Automatización**.
+
+*   **El Bug:** Un humano (o una IA básica) tiende a aceptar la primera narrativa del deudor ("Perdí mi trabajo") para evitar el conflicto cognitivo. Si el agente cae en esto, el estudio pierde millones en cartera no recuperada.
+
+### 5.2 La Contra-Medida Lógica: "Critical Doubt Engine" (Motor de Duda Crítica)
+
+Para evitar que la IA "crea" ciegamente en la excusa del deudor, programamos un **Motor de Duda Crítica**. El agente no busca solo datos que confirmen la excusa, sino que ejecuta un **Algoritmo de Contradicción (IF-THEN-ELSE)**:
+
+> **Contra-Medida Lógica:**
+> *"Para evitar el sesgo de confirmación, el algoritmo está programado para cruzar la excusa del usuario (Discurso) con su historial (Memoria LTM) antes de emitir un juicio. Si hay una discrepancia mayor al 30%, el bot etiqueta la respuesta como 'Evasión' y niega la flexibilización del pago."*
+
+### 5.3 Tabla de Razonamiento Anti-Sesgos (Lógica Condicional)
+
+| **Discurso del Deudor (Input)** | **Validación en Memoria LTM (Backend)** | **Resultado Lógico (Output)** |
+| :--- | :--- | :--- |
+| *"No tengo un peso, estoy en la ruina total."* | **LTM:** Registro de pago parcial hace 15 días. | **Falso Positivo.** El bot detecta la contradicción, ignora la queja y ofrece el plan de pagos obligatorio. |
+| *"Perdí mi trabajo, no puedo pagar."* | **LTM:** No hay registro de despido (desempleo no verificado). | **Duda Crítica.** El bot aplica la regla: "Solicite codeudor o familiar que asuma la deuda". |
+| *"El otro estudio me cobraba menos."* | **LTM:** Historial de acuerdos incumplidos con el estudio anterior. | **Sesgo de Anclaje Evitado.** El bot ignora la comparación y responde: *"El contrato actual es el único vigente".* |
+
+### 5.4 Regla de Seguridad Ética
+El agente **NO** puede asumir el rol de juez. Si el Motor de Duda Crítica detecta que el deudor miente (discrepancia de datos), no lo acusa de estafa, simplemente le niega los beneficios de descuento y lo documenta como "Deudor de Alto Riesgo" para la vía judicial.
+
+---
+*Semana 14 completada: 5 de noviembre de 2026*
 
