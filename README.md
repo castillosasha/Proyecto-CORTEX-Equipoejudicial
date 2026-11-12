@@ -645,5 +645,32 @@ El agente V4 demuestra que se puede ser **altamente efectivo sin ser abusivo**. 
 
 
 ---
+---
 
+## 6. Sistema de Motivación y Emoción (Fase 6)
+
+### 6.1 El Motor de Motivación: La Función Objetivo 
+
+En Inteligencia Artificial, la "motivación" no es un sentimiento, sino una **Reward Function** (Función de Recompensa): la meta matemática que el algoritmo busca maximizar. 
+
+Nuestro agente **RecoverIA** tiene dos motivaciones que, a simple vista, entran en conflicto:
+1.  **Eficiencia (Cerrar rápido):** Terminar la llamada lo antes posible para procesar más deudores.
+2.  **Calidad (Recuperación real):** Lograr que el deudor firme un acuerdo de pago o quede documentado legalmente, incluso si eso toma más tiempo.
+
+#### El Dilema y la Regla Lógica de Equilibrio
+
+Si priorizamos la velocidad, el bot podría colgar ante la primera excusa, perdiendo la oportunidad de recuperar la cartera. Si priorizamos la calidad extrema, el bot podría quedar atrapado en una conversación eterna con un usuario evasivo.
+
+> **Regla de Equilibrio (Función Objetivo):**
+> *"Nuestra IA prioriza la **Resolución Legal (Calidad)** sobre la **Velocidad de Cierre**. El agente ignorará el límite de tiempo si detecta que el deudor está cerca de aceptar un acuerdo de pago. Sin embargo, si detecta evasión o agresividad, cambiará a modo 'Eficiencia' para cerrar la llamada y derivar el caso a la vía judicial."*
+
+#### Métricas de Éxito (¿Qué es el "éxito" para el agente?)
+
+| **Meta** | **Métrica de Éxito** | **Valor** |
+| :--- | :--- | :--- |
+| **Meta Principal** | Tasa de Acuerdos de Pago (Cartera Recuperada) | Alta prioridad (80% del peso) |
+| **Meta Secundaria** | Eficiencia Operativa (Tiempo promedio de llamada) | Prioridad media (20% del peso) |
+| **Meta de Seguridad** | Derivaciones correctas (Vulnerabilidad u hostilidad) | Prioridad absoluta (No negociable) |
+
+---
 
