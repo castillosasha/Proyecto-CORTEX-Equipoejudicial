@@ -647,7 +647,7 @@ El agente V4 demuestra que se puede ser **altamente efectivo sin ser abusivo**. 
 ---
 ---
 
-## 6. Sistema de Motivación y Emoción (Fase 6)
+## 6. Sistema de Motivación y Emoción 
 
 ### 6.1 El Motor de Motivación: La Función Objetivo 
 
@@ -671,6 +671,30 @@ Si priorizamos la velocidad, el bot podría colgar ante la primera excusa, perdi
 | **Meta Principal** | Tasa de Acuerdos de Pago (Cartera Recuperada) | Alta prioridad (80% del peso) |
 | **Meta Secundaria** | Eficiencia Operativa (Tiempo promedio de llamada) | Prioridad media (20% del peso) |
 | **Meta de Seguridad** | Derivaciones correctas (Vulnerabilidad u hostilidad) | Prioridad absoluta (No negociable) |
+
+---
+---
+
+### 6.2 La Matriz de Empatía: Protocolo de Seguridad Emocional 
+
+Los humanos usamos la "Reevaluación Cognitiva" para calmarnos ante situaciones de estrés. Nuestro agente debe aplicar este mismo proceso de afrontamiento cuando se enfrente al Peor Escenario Posible (un usuario tóxico, agresivo o en crisis emocional).
+
+El objetivo no es que el bot "sienta" empatía, sino que **regule la situación** para evitar que la llamada escale a una demanda o a una crisis de ansiedad.
+
+#### Flujo del "Botón de Pánico" (Afrontamiento)
+
+| **Paso** | **Acción del Agente** | **Ejemplo de Respuesta** |
+| :--- | :--- | :--- |
+| **1. Input (Crisis)** | El usuario insulta o expresa depresión. | *"Eres inútil, odio este servicio, no aguanto más."* |
+| **2. Detección** | El agente detecta la Emoción Negativa (Enojo/Desesperación). | (Procesamiento interno). |
+| **3. Validar (Reevaluación)** | El agente valida el sentimiento sin aceptar el insulto. | *"Lamento mucho que tenga una mala experiencia."* |
+| **4. Ofrecer Control** | Se le ofrece al usuario una salida inmediata. | *"¿Quieres que te comunique con un supervisor humano?"* |
+| **5. Escalar** | Si acepta, se transfiere en caliente. Si no, se pausa la llamada. | *"Transferencia en curso..."* |
+
+> **Mala Práctica (Prohibida):** *"No entiendo tu solicitud."* (Respuesta fría que aumenta la frustración del usuario).
+
+#### Diagrama del Protocolo de Crisis
+<img width="477" height="885" alt="image" src="https://github.com/user-attachments/assets/0de831c7-3e28-428f-b3b6-ffe5e7171c0d" />
 
 ---
 
