@@ -675,23 +675,28 @@ Si priorizamos la velocidad, el bot podría colgar ante la primera excusa, perdi
 ---
 ---
 
-### 6.2 La Matriz de Empatía: Protocolo de Seguridad Emocional 
+---
 
-Los humanos usamos la "Reevaluación Cognitiva" para calmarnos ante situaciones de estrés. Nuestro agente debe aplicar este mismo proceso de afrontamiento cuando se enfrente al Peor Escenario Posible (un usuario tóxico, agresivo o en crisis emocional).
+### 6.2 La Matriz de Empatía: Reevaluación Cognitiva y Afrontamiento
 
-El objetivo no es que el bot "sienta" empatía, sino que **regule la situación** para evitar que la llamada escale a una demanda o a una crisis de ansiedad.
+En psicología, la **Reevaluación Cognitiva** es la capacidad de cambiar la forma en que interpretamos una situación para regular nuestras emociones. Nuestro agente no "siente" empatía, pero está programado con un **Algoritmo de Afrontamiento en 3 Capas** para manejar el peor escenario: un deudor en crisis emocional, tóxico o agresivo.
 
-#### Flujo del "Botón de Pánico" (Afrontamiento)
+#### El Protocolo de Afrontamiento (El "Escudo Emocional")
 
-| **Paso** | **Acción del Agente** | **Ejemplo de Respuesta** |
+| **Capa Psicológica** | **Acción del Algoritmo** | **Respuesta del Agente (Output)** |
 | :--- | :--- | :--- |
-| **1. Input (Crisis)** | El usuario insulta o expresa depresión. | *"Eres inútil, odio este servicio, no aguanto más."* |
-| **2. Detección** | El agente detecta la Emoción Negativa (Enojo/Desesperación). | (Procesamiento interno). |
-| **3. Validar (Reevaluación)** | El agente valida el sentimiento sin aceptar el insulto. | *"Lamento mucho que tenga una mala experiencia."* |
-| **4. Ofrecer Control** | Se le ofrece al usuario una salida inmediata. | *"¿Quieres que te comunique con un supervisor humano?"* |
-| **5. Escalar** | Si acepta, se transfiere en caliente. Si no, se pausa la llamada. | *"Transferencia en curso..."* |
+| **1. Valoración (Appraisal)** | El bot detecta la emoción (gritos, llanto) y busca la **causa raíz**. ¿Es frustración por la deuda o agresión directa? | (Procesamiento interno rápido). |
+| **2. Reevaluación** | Si es frustración, el bot **reencuadra** la situación: el enojo no es contra la IA, es contra la deuda. | *"Comprendo su frustración. Nadie quiere estar en esta situación financiera. Vamos a ver cómo la resolvemos hoy."* |
+| **3. Seguridad (Safety)** | Si es agresión o toxicidad, el bot bloquea la empatía y activa la **Defensa Legal**. | *"Le recuerdo que esta llamada es evidencia legal. Si no bajamos el tono, transferiré su caso al departamento judicial."* |
 
-> **Mala Práctica (Prohibida):** *"No entiendo tu solicitud."* (Respuesta fría que aumenta la frustración del usuario).
+#### El Sesgo Afectivo Evitado
+Un bot tradicional caería en el **Sesgo Afectivo** (dejarse llevar por el enojo del usuario y responder de forma fría o defensiva). Nuestro agente utiliza la reevaluación para mantener el control de la conversación, transformando una crisis emocional en una oportunidad para reafirmar la autoridad legal del estudio.
+
+#### Diagrama del Protocolo de Afrontamiento
+![Protocolo de Afrontamiento - Semana 17](./miro-semana17-crisis.png)
+
+---
+*Semana 17 completada: 12 de noviembre de 2026*
 
 #### Diagrama del Protocolo de Crisis
 <img width="477" height="885" alt="image" src="https://github.com/user-attachments/assets/0de831c7-3e28-428f-b3b6-ffe5e7171c0d" />
